@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}HireLens Resume Review - ATS Optimization{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-lg-start text-center">
+                <h1 class="hero-title">
+                    <img src="{% static 'logo.jpg' %}" alt="HireLens Logo" style="height: 150px; width: 150px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                    HIRELENS
+                </h1>
+                <p class="hero-subtitle">Advanced ATS Resume Review System</p>
+                <p class="lead mb-4">
+                    Optimize your resume for Applicant Tracking Systems (ATS) and increase your chances of landing your dream job.
+                </p>
+                <div class="d-flex gap-3 justify-content-lg-start justify-content-center flex-wrap">
+                    <a href="{% url 'upload_resume' %}" class="btn btn-primary-custom">
+                        <i class="fas fa-upload me-2"></i>
+                        Upload Resume
+                    </a>
+                    <a href="#features" class="btn btn-secondary-custom">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <div class="glassmorphism p-4 d-inline-block">
+                    <i class="fas fa-file-alt" style="font-size: 8rem; color: var(--primary-color);"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="features" class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Why Choose HireLens?</h2>
+                <p class="lead text-muted">Our advanced AI-powered system analyzes your resume comprehensively</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card card-custom h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-robot" style="font-size: 3rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h5 class="card-title">ATS Compatibility</h5>
+                        <p class="card-text">Ensures your resume passes through Applicant Tracking Systems with comprehensive format analysis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-custom h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-search" style="font-size: 3rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h5 class="card-title">Keyword Optimization</h5>
+                        <p class="card-text">Analyzes keyword matching against job descriptions to improve your resume's relevance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-custom h-100 text-center p-4">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="fas fa-chart-line" style="font-size: 3rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h5 class="card-title">Detailed Analytics</h5>
+                        <p class="card-text">Provides comprehensive scoring and actionable recommendations for improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 highlight-bg">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-6 fw-bold mb-3">How It Works</h2>
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px; background: var(--primary-color); color: white; font-weight: bold;">
+                                1
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Upload Your Resume</h6>
+                                <p class="mb-0 text-muted">Support for PDF and DOCX formats</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px; background: var(--primary-color); color: white; font-weight: bold;">
+                                2
+                            </div>
+                            <div>
+                                <h6 class="mb-1">AI Analysis</h6>
+                                <p class="mb-0 text-muted">Comprehensive review of format, content, and ATS compatibility</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle d-flex align-items-center justify-content-center me-3"
+                                 style="width: 50px; height: 50px; background: var(--primary-color); color: white; font-weight: bold;">
+                                3
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Get Results</h6>
+                                <p class="mb-0 text-muted">Receive detailed feedback and actionable recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <div class="card card-custom p-4">
+                    <h5 class="text-primary mb-3">Ready to Get Started?</h5>
+                    <p class="text-muted mb-4">Join thousands of job seekers who have improved their resumes with HireLens</p>
+                    <a href="{% url 'upload_resume' %}" class="btn btn-primary-custom">
+                        <i class="fas fa-rocket me-2"></i>
+                        Start Your Review
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="display-6 fw-bold mb-4">Key Features</h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-spell-check" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h6>Spell Check</h6>
+                    <p class="text-muted small">Identifies and highlights spelling errors</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-list-check" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h6>Section Analysis</h6>
+                    <p class="text-muted small">Ensures all critical sections are present</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-image" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h6>Format Check</h6>
+                    <p class="text-muted small">Detects ATS-incompatible elements</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="mb-3">
+                        <i class="fas fa-calendar-alt" style="font-size: 2.5rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h6>Date Validation</h6>
+                    <p class="text-muted small">Verifies proper date formatting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="py-5" id="pricing">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-6 fw-bold mb-3">Pricing</h2>
+                <p class="lead text-muted">Simple, affordable plans for every job seeker</p>
+            </div>
+        </div>
+        <div class="row justify-content-center g-4">
+            <div class="col-md-4">
+                <div class="card card-custom h-100 text-center p-4 border-primary" style="border-width:2px;">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Unlimited Scans</h5>
+                        <h2 class="text-primary mb-3">₹150<span class="fs-5">/month</span></h2>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Unlimited resume scans</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Full access to all features</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Email support</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary-custom w-100">Choose Monthly</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-custom h-100 text-center p-4 border-secondary" style="border-width:2px;">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">One-Time Scan</h5>
+                        <h2 class="text-secondary mb-3">₹80<span class="fs-6">/scan</span></h2>
+                        <ul class="list-unstyled mb-4">
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Single resume scan</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Full analysis report</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Instant results</li>
+                        </ul>
+                        <a href="#" class="btn btn-secondary-custom w-100">One-Time Scan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
